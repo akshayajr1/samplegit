@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>month change</title>
+<style>
+.division{
+margin-left:400px;
+margin-top:200px;
+background-color:blue;
+padding:20px;
+border:none;
+border-radius:4px;
+width:500px;
+}
+.button{
+background-color:grey;
+border-radius:8px;
+border:none;
+padding:20px;
+font-size:30px;
+}
+button:hover{
+background-color:green;
+}
+input[type=text] {
+  border:none;
+  background-color:pink;
+  font-size:30px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="division">
+<center>
+<input type="text" name="elem" id="t1" value="Monday"><br><br>
+<input type="text" name="elem" id="t2" value="January"><br><br>
+<button class="button" onclick="changeday()">Change day</button>
+<button class="button" onclick="changemonth()">Change month</button>
+</center>
+<script>
+function changeday()
+{
+    var elem = document.getElementById("t1");
+    if (elem.value=="Monday") elem.value = "Tuesday";
+    else if(elem.value=="Tuesday") elem.value="Wednesday";
+    else if(elem.value=="Wednesday") elem.value="Thursday";
+    else if(elem.value=="Thursday") elem.value="Friday";
+    else if(elem.value=="Friday") elem.value="Saturday";
+    else if(elem.value=="Saturday") elem.value="Sunday";
+    else elem.value="Monday";
+}
+function changemonth()
+{
+    var elem = document.getElementById("t2");
+    if (elem.value=="January") elem.value = "February";
+    else if(elem.value=="February") elem.value="March";
+    else if(elem.value=="March") elem.value="April";
+    else if(elem.value=="April") elem.value="May";
+    else if(elem.value=="May") elem.value="June";
+    else if(elem.value=="June") elem.value="July";
+    else if(elem.value=="July") elem.value="August";
+    else if(elem.value=="August") elem.value="September";
+    else if(elem.value=="September") elem.value="October";
+    else if(elem.value=="October") elem.value="November";
+    else if(elem.value=="November") elem.value="December";
+    else elem.value="January";
+}
+</script>
+</div>
+</body>
+</html>
+
+   

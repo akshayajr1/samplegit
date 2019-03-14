@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+body
+{
+width:30%;
+height:40%;
+border:solid red;
+margin-left:20%;
+background-color:lightyellow;
+
+}
+#f1,#f2
+{
+margin-left:10%;
+}
+
+
+</style>
+</head>
+<body>
+<div id="f1">
+<h1 id="demo">Monday</h1>
+<button onclick="week()">change week</button>
+</div>
+
+<div id="f2">
+<h1 id="demo1">January</h1>
+<button onclick="month()">change month</button>
+</div>
+
+<script>
+var day_index=1;
+var month_index=1;
+function week()
+{
+var days_of_week= ["monday","tuesday","wednesday","thursday","friday","saturday","sunday"];
+document.getElementById("demo").innerHTML= days_of_week[day_index++];
+if(day_index >=7)
+{
+day_index=0;
+}
+}
+
+function month()
+{
+var months_in_year= ["january","february","march","april","may","june","july","August","september","october","november","december"];
+document.getElementById("demo1").innerHTML= months_in_year[month_index++];
+if(month_index >=12)
+{
+month_index=0;
+}
+}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,87 @@
+
+<html>
+
+        <head>
+            <style>
+                #image {
+                    align-content: center;
+                    border: 1px solid black;
+                }
+                button {
+                    font-size: 30px;
+                
+                }
+            </style>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#enlarge").click(function () {
+                        var width = parseInt($("img").width());
+                        var height = parseInt($("img").height());
+                        var width = width + 100;
+                        var height = height + 100;
+                        $("img").width(width);
+                        $("img").height(height);
+                    });
+                    $("#shrink").click(function () {
+                        var width = parseInt($("img").width());
+                        var height = parseInt($("img").height());
+                        var width = width - 100;
+                        var height = height - 100;
+                        $("img").width(width);
+                        $("img").height(height);
+                    });
+                });
+            </script>
+        
+        </head>
+        
+        <body>
+            <img id="image" src="f3.jpg" height="500px" width="700px">
+            <br><br>
+        
+            <button onclick="prev()">
+                Previous
+            </button>
+            <button onclick="next()">
+                Next
+            </button>
+            <button id="enlarge">
+                enlarge
+            </button>
+            <button id="shrink">
+                shrink
+            </button>
+            <script>
+                var a = ['imageh.jpg','pic2.jpg','pic3.jpg','pic4.jpg','cover.jpg'];
+                var i = 1;
+                var x = 6;
+                function next() {
+                    if (i < 5) {
+                        var Element = document.getElementById("image");
+                        Element.setAttribute("src", a[i]);
+                        i++;
+                    }
+                    else {
+                        i = 0;
+                        var Element = document.getElementById("image");
+                        Element.setAttribute("src", a[i]);
+                    }
+                }
+                function prev() {
+                    var Element = document.getElementById("image");
+                    Element.setAttribute("src", a[x--]);
+                    console.log(a[x]);
+                    if (x <= 0) {
+                        x = 6;
+                        var Element = document.getElementById("image");
+                        Element.setAttribute("src", a[x]);
+                        console.log(a[x]);
+                    }
+                }
+            </script>
+        
+        
+        </body>
+        
+        </html>

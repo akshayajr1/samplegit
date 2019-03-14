@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+var i=0;
+function change_text()
+{
+if(i%2==0)
+{
+text="hello";
+}
+else
+{
+text="welldone";
+}
+i++;
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<p id="demo"></p>
+<br>
+<button onclick="change_text()">click here</button>
+</body>
+</html> 
