@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <button onclick="myFunction()">Greet !</button>
+        <p id="demo"></p>
+        <script>
+            var i="";
+            var j=0;
+            var a= "Hello!...";
+            var b="Well done!...";
+            function myFunction()
+            {
+                if(j%2==0)
+                {
+                    i=i+a;
+                    j++;
+                }
+                else{
+                    i=i+b;
+                    j++;
+                }
+                document.getElementById('demo').innerHTML=i;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table, td {
+        border: 1px solid black;
+    }
+    tr{
+        height:40px;
+        width:100%;
+    }
+    table{
+        width:70%;
+    }
+    #page{
+        width:600px;
+        margin:40px auto;
+        
+    }
+    input{
+        width:400px;
+        height: 30px;
+        border-radius:12px;
+        padding:5px;
+        outline:none;
+    }
+    button{
+        padding:10px;
+        color: skyblue;
+        width:93px;
+        background-color:#000;
+    }
+</style>
+</head>
+<body>
+    <div id="page">
+        <h1>Employee Details Form</h1>
+        <form action="" >        
+            First name:<br>
+            <input type="text" name="firstname" id="first" required>
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" id="last" required>
+            <br>
+            Salary:<br>
+            <input type="number" name="salary" id="salary" required>
+            <br><br>
+            <button type="reset" value="Reset">Reset</button>
+        </form>
+       
+        <button  onclick="myFunction()">Submit</button><br><br>
+        <button  onclick="result()">Result</button><br><br>
+        
+        <table id="myTable">
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Salary</td>
+            </tr>
+        </table>
+       <div>Total: <p id="sum">0</p></div>
+       <div>Average: <p id="avg">0</p></div>
+        <br>
+    </div>
+<script>
+var total= 0;
+function myFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(1);
+    cell1.innerHTML = document.getElementById('first').value;
+    cell3.innerHTML = document.getElementById('last').value;
+    cell2.innerHTML = document.getElementById('salary').value;
+    salary = document.getElementById("salary").value
+    salary = parseInt(salary);  
+    total = parseInt(total);
+    total = total + salary;
+    document.getElementById("sum").innerHTML = total;   
+    var row = document.getElementById("myTable").rows.length;
+    document.getElementById("avg").innerHTML = total/(row-1);
+}
+var sum = 3;
+function result(){
+    document.getElementById("sum").innerHTML = sum;
+    var row = document.getElementById("myTable").rows.length;
+    for(var i=1; i<=row; i++){
+        var tempsum = document.getElementById("myTable").rows[i].cells[2].innerHTML;
+        var sum = sum + parseInt(tempsum);
+       
+    }
+}
+</script>
+
+</body>
+</html>
