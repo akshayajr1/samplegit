@@ -1,0 +1,66 @@
+<html>
+<head>
+
+<style>
+h1{
+text-align:center;
+}
+
+</style>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<script>
+$(document).ready(function()
+{
+var i=0;
+$("#button1").click(function()
+{
+if(i%2==0)
+{
+$("p").css("background-color", "pink");
+}
+else{
+$("p").css("background-color", "white");
+
+}
+i++;
+});
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+var j=0;
+$("#button2").click(function()
+{
+if(j%2==0)
+{
+$("p").css("border", "solid");
+$("p").css("border-radius","20px");
+}
+else{
+$("p").css("border","none");
+}
+j++;
+});
+});
+
+</script>
+
+</head>
+<body>
+<h1>INDEPENDENCE DAY</h1>
+
+<p id="p1">Independence Day is annually celebrated on 15 August, as a national holiday in India commemorating the nation's independence from the United Kingdom on 15 August 1947, the UK Parliament passed the Indian Independence Act 1947 transferring legislative sovereignty to the Indian Constituent Assembly. India still retained King George VI as head of state until its transition to full republican constitution. India attained independence following the Independence Movement noted for largely non-violent resistance and civil disobedience led by the Indian National Congress (INC). Independence coincided with the partition of India, in which the British India was divided along religious lines into the Dominions of India and Pakistan; the partition was accompanied by violent riots and mass casualties, and the displacement of nearly 15 million people due to religious violence. On 15 August 1947, the first Prime Minister of India, Jawaharlal Nehru raised the Indian national flag above the Lahori Gate of the Red Fort in Delhi. On each subsequent Independence Day, the incumbent Prime Minister customarily raises the flag and gives an address to the nation.</p>
+<hr>
+<p id="p2">European traders had established outposts in the Indian subcontinent by the 17th century. Through overwhelming military strength, the British East India company subdued local kingdoms and established themselves as the dominant force by the 18th century. Following the First War of Independence of 1857, the Government of India Act 1858 led the British Crown to assume direct control of India. In the decades following, civic society gradually emerged across India, most notably the Indian National Congress Party, formed in 1885.[4][5]:123 The period after World War I was marked by British reforms such as the Montagu–Chelmsford Reforms, but it also witnessed the enactment of the repressive Rowlatt Act and calls for self-rule by Indian activists. The discontent of this period crystallised into nationwide non-violent movements of non-cooperation and civil disobedience, led by Mohandas Karamchand Gandhi.</p>
+<hr>
+<p id="p3">At the 1929 Lahore session of the Indian National Congress, the Purna Swaraj declaration, or "Declaration of the Independence of India" was promulgated, and 15 August was declared as Independence Day. The Congress called on people to pledge themselves to civil disobedience and "to carry out the Congress instructions issued from time to time" until India attained complete independence.[7] Celebration of such an Independence Day was envisioned to stoke nationalistic fervour among Indian citizens, and to force the British government to consider granting independence. The Congress observed 26 January as the Independence Day between 1930 and 1946. The celebration was marked by meetings where the attendants took the "pledge of independence".[8]:19–20 Jawaharlal Nehru described in his autobiography that such meetings were peaceful, solemn, and "without any speeches or exhortation". Gandhi envisaged that besides the meetings, the day would be spent "... in doing some constructive work, whether it is sping, or service of 'untouchables,' or reunion of Hindus and Mussalmans, or prohibition work, or even all these together".</p>
+<br><br>
+<hr>
+<button id="button1">Toggle colours</button>
+
+<button id="button2">Toggle Round Edges</button>
+</body>
+</html>
